@@ -1,0 +1,9 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+Trace.pm
+t/basic.t
+t/caller.t
+t/maxlen.t
+t/stack.t
