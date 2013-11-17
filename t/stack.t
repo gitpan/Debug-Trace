@@ -30,7 +30,8 @@ my $fl;
 $msg = ""; $fl = __LINE__ + 1;
 x1("blah");
 $msg =~ s/', '/','/g;		# to match some older Carps
-ok($msg,<<EOD);
+$msg =~ s/", "/","/g;		# to match some newer Carps
+my $result = <<EOD;
 TRACE:	main::x1("blah") called at @{[__FILE__]} line $fl package main
 TRACE:	main::x2("a","b","c") called at @{[__FILE__]} line $l1
 	main::x1('blah') called at @{[__FILE__]} line $fl
@@ -44,3 +45,9 @@ TRACE:	main::x3() returned
 TRACE:	main::x2() returned
 TRACE:	main::x1() returned
 EOD
+
+# Newer Carp have a slightly different longmess output format.
+use Carp ();
+$result =~ s/\'/"/g if $Carp::VERSION >= 1.32;
+
+ok($msg,$result);

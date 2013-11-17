@@ -1,7 +1,9 @@
+#! perl
+
 package Debug::Trace;
 
 use 5.00503;		# Yes!
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 use strict;
 #use warnings;		# Such a pity we cannot use this one...
@@ -345,9 +347,11 @@ Johan Vromans <jv@cpan.org>;
 
 This is an Amsterdam.pm production. See http://amsterdam.pm.org.
 
+Current maintainer is Johan Vromans <jv@cpan.org>.
+
 =head1 COPYRIGHT
 
-Copyright 2002 Amsterdam.pm. All rights reserved.
+Copyright 2002,2013 Amsterdam.pm. All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

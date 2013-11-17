@@ -19,3 +19,6 @@ Revision history for Perl extension Debug::Trace.
 0.04  Fri Oct  4 22:01:45 2002
         - Add tests, update documentation and small fixes for caller,
 	  stacktrace, maxlen.
+
+0.05  Thu Nov  7 2002
+	- Update tests for Carp >= 1.32.
